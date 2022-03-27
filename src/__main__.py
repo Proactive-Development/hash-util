@@ -30,6 +30,16 @@ if __name__ == "__main__":
                     print("SHA384: "+hashlib.sha384(open(file, 'rb').read()).hexdigest())
                     print("\n")   
             exit()
+        if arg == "-t":
+            for root, dirs, files in os.walk(os.getcwd()):
+                for file in files:
+                    print("File: "+root+"/"+file)
+                    print("MD5:    "+hashlib.md5(open(root+"/"+file, 'rb').read()).hexdigest())
+                    print("SHA224: "+hashlib.sha224(open(root+"/"+file, 'rb').read()).hexdigest())
+                    print("SHA256: "+hashlib.sha256(open(root+"/"+file, 'rb').read()).hexdigest())
+                    print("SHA384: "+hashlib.sha384(open(root+"/"+file, 'rb').read()).hexdigest())
+                    print("\n")   
+            exit()
         if arg == "-f":
             method = "MD5"
             for arg in sys.argv:

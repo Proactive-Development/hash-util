@@ -10,11 +10,12 @@ Comming Soon
 
 ## Commands
 ```
--ls               List the diectory and show the hashes of each file
+-ls               List the directory and show the hashes of each file
 -f  <Hash>        Find a file with a given hash
 -v  <File> <Hash> Verify a file with a hash
+-t                Same as -ls but with files in subdirectory's
 
---help            Displays a help mesage
+--help            Displays a help message
 --version         Displays the version
 --verbose         Activates verbose mode
 --quiet           Activates quiet mode

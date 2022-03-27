@@ -79,20 +79,30 @@ if __name__ == "__main__":
                         method = "SHA384"
 
             hash = sys.argv[len(sys.argv) - 1]
-            foundfiles = []
-            for root, dirs, files in os.walk(os.getcwd()):
-                for file in files:
-                    if method == "MD5":
-                        if hash == str(hashlib.md5(open(root+"/"+file, 'rb').read()).hexdigest()):
-                            foundfiles.append(root+"/"+file)
-                    if method == "SHA224":
-                        if hash == str(hashlib.sha224(open(root+"/"+file, 'rb').read()).hexdigest()):
-                            foundfiles.append(root+"/"+file)
-                    if method == "SHA256":
-                        if hash == str(hashlib.sha256(open(root+"/"+file, 'rb').read()).hexdigest()):
-                            foundfiles.append(root+"/"+file)
-                    if method == "SHA384":
-                        if hash == str(hashlib.sha384(open(root+"/"+file, 'rb').read()).hexdigest()):
-                            foundfiles.append(root+"/"+file)
-            print(foundfiles)
+            file = sys.argv[len(sys.argv) - 2]
+            
+            if method == "MD5":
+                file_hash = str(hashlib.md5(open(file, 'rb').read()).hexdigest())
+                if file_hash == hash:
+                    print("[PASS] File has the same hash as the given hash:"+hash)
+                else:
+                    print("[FAIL] File has a different hash than the given hash:"+hash)
+            if method == "SHA224":
+                file_hash = str(hashlib.sha224(open(file, 'rb').read()).hexdigest())
+                if file_hash == hash:
+                    print("[PASS] File has the same hash as the given hash:"+hash)
+                else:
+                    print("[FAIL] File has a different hash than the given hash:"+hash)
+            if method == "SHA256":
+                file_hash = str(hashlib.sha256(open(file, 'rb').read()).hexdigest())
+                if file_hash == hash:
+                    print("[PASS] File has the same hash as the given hash:"+hash)
+                else:
+                    print("[FAIL] File has a different hash than the given hash:"+hash)
+            if method == "SHA384":
+                file_hash = str(hashlib.sha384(open(file, 'rb').read()).hexdigest())
+                if file_hash == hash:
+                    print("[PASS] File has the same hash as the given hash:"+hash)
+                else:
+                    print("[FAIL] File has a different hash than the given hash:"+hash)
             exit()

@@ -2,13 +2,24 @@ import hashlib
 import sys
 import os
 import hashlib
+helpmsg ="""
+-ls               List the directory and show the hashes of each file
+-f  <Hash>        Find a file with a given hash
+-v  <File> <Hash> Verify a file with a hash
+-t                Same as -ls but with files in subdirectory's
+
+--help            Displays a help message
+--version         Displays the version
+--verbose         Activates verbose mode
+--quiet           Activates quiet mode
+"""
 if __name__ == "__main__":
     verbose = False
     quiet = False
     version = "0.0.1"
     for arg in sys.argv:
         if arg == "--help":
-            print("Usage: hash-util -ls -f <hash> -v <file> <hash> --help --verbose --quiet")
+            print(helpmsg)
             exit()
         if arg == "--version":
             print("hash-util version: " + version)
@@ -116,3 +127,4 @@ if __name__ == "__main__":
                 else:
                     print("[FAIL] File has a different hash than the given hash:"+hash)
             exit()
+    print("Usage: hash-util -ls -f <hash> -v <file> <hash> --help --verbose --quiet")

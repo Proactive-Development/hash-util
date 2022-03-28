@@ -5,7 +5,7 @@ Work with file hashes easier than ever (b3ed95a3e8db0f4a63546276a77c1988)
 ## Depandancies
 - python 3.7+
 
-## Auto Instalation (For linux)
+## Auto Installation (For linux)
 Comming Soon
 
 ## Commands

@@ -2,11 +2,11 @@
 <img src="https://raw.githubusercontent.com/Proactive-Development/Logos/main/hash-util/hash-util.png" width=100>
 Work with file hashes easier than ever (b3ed95a3e8db0f4a63546276a77c1988)
 
-## Depandancies
+## Dependencies
 - python 3.7+
 
 ## Auto Installation (For linux)
-Comming Soon
+``` curl -fsSL https://raw.githubusercontent.com/Proactive-Development/hash-util/main/scripts/install.sh | bash - ```
 
 ## Commands
 ```

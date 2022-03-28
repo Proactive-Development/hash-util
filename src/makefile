@@ -10,5 +10,4 @@ uninstall:
 clean:
 	rm app_build.zip
 	rm hash-util
-scripti:
-	mv ./hash-util output/
+

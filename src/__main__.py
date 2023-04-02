@@ -1,7 +1,6 @@
 import hashlib
 import sys
 import os
-import hashlib
 helpmsg ="""
 -ls               List the directory and show the hashes of each file
 -f  <Hash>        Find a file with a given hash
